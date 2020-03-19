@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <title>Cálices - Feira Cultural - 9° ano</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        body{
+            background-color: #ffffff;
+        } 
+        img{
+            margin-top: 2%;
+            margin-bottom: 1em;
+            width: 80%;
+        }
+        h1{
+            font-size: 35px;
+            font-weight: lighter;
+            width: 82%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 3px;
+            margin-top: 3px;
+            margin-top: 6px;
+            color: #222222;
+        }
+        h2{
+            font-size: 30px;
+            font-weight: lighter;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 5px;
+            color: #444444;
+            border-bottom: 1px solid #999999;
+        }
+        p{
+            text-align: center;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 5px;
+            display: none;
+            font-family: 'Open Sans', sans-serif;
+        }
+        #sobre, #UNMC{
+            cursor: pointer;
+        }
+        h2 i{
+            font-size: 15px;
+            min-height: 20px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        span{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        ul li{
+            text-align: -webkit-match-parent;
+        }
+        hr{
+            border-color: #999999;
+            text-align: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálice</h1>
+    <!--"<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/KelchbarockSchreibmayr.jpg" alt="Imagem do Cálice">-->
+    <h2 class="h1" id="sobre"><i class="fas fa-chevron-up"></i> Sobre</h1>
+    <p id="txt1">O cálice, do latim calix ou do grego kylix que era usado nos simpósios, é um recipiente destinado a conter líquidos. É usado concretamente em certos rituais cristãos para conter o vinho com água, sendo apresentado no altar.
+    <h2 id="UNMC"><i class="fas fa-chevron-up"></i> Uso na missa cristã</h2>
+    <p id="txt2">Na missa cristã, o cálice representa o Santo Graal, ou seja, o cálice que Jesus Cristo teria usado n a Última Ceia. É usado na Liturgia eucarística e no Rito da Comunhão. Antes e depois desses momentos, ele fica vazio, de forma que água e o vinho que serão usados na Consagração ficam em recipientes à parte, as galhetas.</p>
+    <span id="Obj">Objetos e alfaias que acompanham o cálice</span>
+    <ul id="ul">
+        <li>A <a href="https://pt.wikipedia.org/wiki/Patena" target="_blank" rel="noopener noreferrer">patena</a>, que leva consigo a <a href="https://pt.wikipedia.org/wiki/H%C3%B3stia" target="_blank" rel="noopener noreferrer">hostia grande</a>.</li>
+        <li>O <a href="https://pt.wikipedia.org/wiki/Sangu%C3%ADneo" target="_blank" rel="noopener noreferrer">sanguíneo</a>, um pano retangular e comprido que serve para purificar, ou seja, limpar o cálice após a Comunhão.</li>
+        <li>A <a href="https://pt.wikipedia.org/wiki/Pala_(liturgia)" target="_blank" rel="noopener noreferrer">pala</a>, que serve para cobrir o cálice.</li>
+        <li>O <a href="https://pt.wikipedia.org/wiki/Corporal" target="_blank" rel="noopener noreferrer">corporal</a>, pano no qual se coloca o cálice, a patena e as <a href="https://pt.wikipedia.org/wiki/%C3%82mbula" target="_blank" rel="noopener noreferrer">âmbulas</a>.</li>
+    </ul>
+    <hr>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+    document.getElementById("sobre").onclick = function() {piramide()};
+    var x = document.getElementById("txt1");
+    function piramide() {
+    if (window.getComputedStyle(x).display === "none") {
+        $("#txt1").show();
+        $("#sobre").find('i').removeClass('fas fa-chevron-up');
+        $("#sobre").find('i').addClass('fas fa-chevron-down');}
+        
+    else{
+        $("#txt1").hide();
+        $("#sobre").find('i').removeClass('fas fa-chevron-down');
+        $("#sobre").find('i').addClass('fas fa-chevron-up');}
+    }
+ 
+    document.getElementById("UNMC").onclick = function() {UNMC()};
+    var y = document.getElementById("txt2");
+    function UNMC() {
+    if (window.getComputedStyle(y).display === "none") {
+        $("#txt2").show();
+        $("#UNMC").find('i').removeClass('fas fa-chevron-up');
+        $("#UNMC").find('i').addClass('fas fa-chevron-down');}
+    else{
+        $("#txt2").hide();
+        $("#UNMC").find('i').removeClass('fas fa-chevron-down');
+        $("#UNMC").find('i').addClass('fas fa-chevron-up');}
+    }
+</script>
+</html>
